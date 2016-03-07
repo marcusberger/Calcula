@@ -21,6 +21,10 @@
         <activity
             android:name=".ListaMateriaActivity"
             android:label="@string/title_activity_lista_materia"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListaSemestreActivity"
+            android:label="@string/title_activity_semestre"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
