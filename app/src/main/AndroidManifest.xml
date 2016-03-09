@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.marcusberger.calculamediaunipnovo">
+    package="com.marcusberger.calculamediaunipnovo" >
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".InitialActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,13 +19,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ListaMateriaActivity"
-            android:label="@string/title_activity_lista_materia"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".ListaSemestreActivity"
             android:label="@string/title_activity_semestre"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FormularioMateriaActivity"
+            android:label="@string/title_activity_formulario"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.marcusbe.FormularioSemestreActivity"
+            android:label="@string/title_activity_formulario_semestre"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FormularioSemestreActivity"
+            android:label="@string/title_activity_formulario_semestre"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

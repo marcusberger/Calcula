@@ -1,23 +1,23 @@
 package com.marcusberger.calculamediaunipnovo;
 
-import android.location.GpsStatus;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Switch;
-import android.widget.Toast;
 
 public class ListaSemestreActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_semestre);
+        setContentView(R.layout.activity_lista_semestre);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,14 +26,17 @@ public class ListaSemestreActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_selectable_list_item, semestre);
         listaSemestre.setAdapter(adapter);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton addSemestre = (FloatingActionButton)findViewById(R.id.add_semestre);
+        addSemestre.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Formulario add Semestre", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+                Intent intentFormuSeme = new Intent(ListaSemestreActivity.this, FormularioSemestreActivity.class);
+                startActivity(intentFormuSeme);
             }
         });
+
     }
+
+
 
 }
